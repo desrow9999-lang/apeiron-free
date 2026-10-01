@@ -124,16 +124,23 @@ if api_key_input:
     st.session_state.api_key = api_key_input.strip()
 
 
-# --- 画面最下部に広告を設置 ---
+# --- 画面最下部に広告を配置 ---
 st.write("---")
 st.caption("スポンサーリンク")
 
-a8_code = """
-<div style="display: flex; justify-content: center;">
-<a href="https://px.a8.net/svt/ejp?a8mat=4BE68R+1SAU42+4GSM+C33KX" rel="nofollow">
-<img border="0" width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=261001755108&wid=001&eno=01&mid=s00000020839002030000&mc=1"></a>
-<img border="0" width="1" height="1" src="https://www3.a8.net/0.gif?a8mat=4BE68R+1SAU42+4GSM+C33KX" alt="">
-</div>
+# 1つ目の広告（楽天市場）
+a8_html_1 = """
+<a href="https://rpx.a8.net/svt/ejp?a8mat=4BE68R+1823JM+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26100165665_4BE68R_1823JM_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow">
+<img src="http://hbb.afl.rakuten.co.jp/hsb/0ec09ba3.bc2429d5.0eb4bbaa.95151395/" border="0"></a>
+<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4BE68R+1823JM+2HOM+656YP" alt="">
 """
+components.html(a8_html_1, height=270)
 
-components.html(a8_code, height=270)
+# 2つ目の広告（横長バナー）
+a8_html_2 = """
+<a href="https://px.a8.net/svt/ejp?a8mat=4BE68R+18NJ5E+50+2HV61T" rel="nofollow">
+<img border="0" width="728" height="90" alt="" src="https://www27.a8.net/svt/bgt?aid=261001755075&wid=001&eno=01&mid=s00000000018015094000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4BE68R+18NJ5E+50+2HV61T" alt="">
+"""
+components.html(a8_html_2, height=110)
+
